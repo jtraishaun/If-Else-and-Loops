@@ -1,4 +1,5 @@
 var wrapperEle = document.body.querySelector(".wrapper");
+var submitEle = document.querySelector(".submit");
 var animals = [ "dog", "fish", "cat", "shark", "cat", "dog"];
 
 for(var i=0; i<animals.length; i++){
@@ -15,5 +16,10 @@ function checkAnimal(str){
     ele.innerHTML="I am an animal";
   }
   
-  wrapperEle.appendChild(ele);
+ wrapperEle.appendChild(ele);
 }
+
+submitEle.addEventListener("click", function(){
+ checkAnimal();
+  
+})
